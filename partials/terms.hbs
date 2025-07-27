@@ -1,0 +1,13 @@
+<main class="terms-page-container">
+    <h1 class="terms-title">{{title}}</h1>
+    <p class="terms-last-updated">Última actualización: {{lastUpdated}}</p>
+
+    <div class="terms-content">
+        {{#each sections}}
+        <section id="{{id}}" class="term-section">
+            <h2 class="section-heading">{{heading}}</h2>
+            <p class="section-content">{{content}}</p>
+        </section>
+        {{/each}}
+    </div>
+</main>

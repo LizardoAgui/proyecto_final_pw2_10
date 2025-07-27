@@ -1,0 +1,63 @@
+@import "variables.less";
+
+.terms-page-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.terms-title {
+    text-align: center;
+    color: @text-color;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+
+.terms-last-updated {
+    text-align: center;
+    color: lighten(@text-color, 30%);
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.terms-content {
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.term-section {
+    margin-bottom: 2.5rem;
+
+    .section-heading {
+        color: @text-color; 
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid lighten(@color-3, 60%);
+        padding-bottom: 0.5rem;
+    }
+
+    .section-content {
+        color: @text-color;
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+}
+
+// Responsive
+@media (max-width: 768px) {
+    .terms-page-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .terms-title {
+        font-size: 2.5rem;
+    }
+
+    .section-heading {
+        font-size: 1.8rem;
+    }
+}
