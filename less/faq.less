@@ -1,0 +1,111 @@
+@import 'variables.less';
+
+.faq-seccion {
+    padding: 40px 20px;
+    color: @text-color;
+    align-items: center;
+
+    h1 {
+        text-align: center;
+        color: @text-color;
+        margin-bottom: 2rem;
+    }
+
+    .faq-categoria {
+        margin-bottom: 30px;
+        border: 2px solid @borde;
+        border-radius: 8px;
+        overflow: hidden;
+
+        .titulo-categoria {
+            background-color: @header-bg;
+            color: @text-color;
+            padding: 15px 20px;
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &::after {
+                content: '+';
+                font-size: 1.4em;
+                transition: transform 0.4s ease;
+            }
+
+            &.activo::after {
+                content: '-';
+                transform: rotate(0deg);
+            }
+        }
+
+        .preguntas-categoria {
+            display: none; // Oculto por defecto, se alternará con JavaScript
+            padding: 0 20px 20px;
+            background-color: lighten(@color-3, 5%);
+            border-top: 2px solid @borde;
+        }
+
+        .faq-item {
+            margin-top: 20px;
+            border-bottom: 2px dashed @borde;
+            padding-bottom: 15px;
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            .faq-pregunta {
+                color: @text-color;
+                font-size: 1.2em;
+                font-weight: 600;
+                margin-bottom: 10px;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &::after {
+                    content: '▼'; // Flecha hacia abajo
+                    font-size: 0.8em;
+                    transition: transform 0.6s ease;
+                }
+
+                &.activo::after {
+                    transform: rotate(180deg); // Flecha hacia arriba
+                }
+            }
+
+            .faq-respuesta {
+                display: none; // Oculto por defecto, se alternará con JavaScript
+                padding-left: 15px;
+                font-size: 1em;
+                line-height: 1.6;
+                color: @text-color;
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+// Ajustes responsive básicos
+@media (max-width: 768px) {
+    .faq-seccion {
+        padding: 20px 10px;
+    }
+
+    .faq-categoria .titulo-categoria {
+        font-size: 1.5em;
+        padding: 12px 15px;
+    }
+
+    .faq-item .faq-pregunta {
+        font-size: 1.1em;
+    }
+}

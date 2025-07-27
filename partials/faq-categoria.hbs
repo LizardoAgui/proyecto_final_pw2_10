@@ -1,0 +1,8 @@
+{{!-- faq-categoria.hbs --}}
+<section class="faq-categoria">
+    <h2 class="titulo-categoria">{{nombreCategoria}}</h2>
+    <div class="preguntas-categoria"> {{!-- <--- Clase correcta --}} {{#each faqs}} {{> faqs pregunta=this.pregunta
+            respuesta=this.respuesta}}
+            {{/each}}
+    </div>
+</section>

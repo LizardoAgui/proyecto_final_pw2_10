@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.png" type="image/png" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/less/principal.less" />
+
+    <title>AYUDA | Bluck_HN</title>
+</head>
+
+<body>
+    {{> header }}
+
+    <main>
+        <section class="faq-seccion">
+            <h1>Preguntas Frecuentes</h1>
+            {{!-- Llamadas a faq-categoria.hbs con los datos específicos de cada categoría --}}
+            {{> faq-categoria nombreCategoria=" Pedidos y Personalización" faqs=pedidosYPersonalizacionFAQs }}
+            {{> faq-categoria nombreCategoria=" Precios y Pagos" faqs=preciosYPagosFAQs }}
+            {{> faq-categoria nombreCategoria=" Envíos y Entregas" faqs=enviosYEntregasFAQs }}
+            {{> faq-categoria nombreCategoria=" Cuidados y Recomendaciones" faqs=cuidadosYRecomendacionesFAQs }}
+            {{> faq-categoria nombreCategoria=" Cambios y Devoluciones" faqs=cambiosYDevolucionesFAQs }}
+            {{> faq-categoria nombreCategoria=" Contacto y Soporte" faqs=contactoYSoporteFAQs }}
+            {{> faq-categoria nombreCategoria=" Otras Preguntas" faqs=otrasPreguntasFAQs }}
+        </section>
+    </main>
+
+    {{> footer }}
+</body>
+
+</html>
