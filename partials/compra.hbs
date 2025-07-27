@@ -1,0 +1,54 @@
+<h1 class="titulo-compra">Pasos para realizar tu compra</h1>
+<section class="pasos-compra">
+  {{> pasoscompra 
+    titulo="Paso 1"
+    descripcion="Toma una captura o guarda una referencia del diseño que deseas."
+    imagen="/img/paso1.png"
+    alt="Referencia de diseño"
+  }}
+
+  {{> pasoscompra 
+    reverse=true
+    titulo="Paso 2"
+    descripcion="Contáctanos por Instagram, WhatsApp o Facebook."
+    imagen="/img/paso2.png"
+    alt="Redes sociales"
+  }}
+
+  {{> pasoscompra 
+    titulo="Paso 3"
+    descripcion="Envíanos el tipo de trabajo que deseas con la referencia."
+    imagen="/img/paso3.png"
+    alt="Tipo de trabajo"
+  }}
+
+  {{> pasoscompra 
+    reverse=true
+    titulo="Paso 4"
+    descripcion="Si es prenda de vestir, indícanos tipo, talla y color."
+    imagen="/img/paso4.png"
+    alt="Detalles de prenda"
+  }}
+
+  {{> pasoscompra 
+    titulo="Paso 5"
+    descripcion="Se requiere un adelanto del 60%, por Banca Móvil de Banco Occidente o efectivo en tienda."
+    imagen="/img/paso5.png"
+    alt="Pago inicial"
+  }}
+
+  {{> pasoscompra 
+    reverse=true
+    titulo="Paso 6"
+    descripcion="Recibirás confirmación cuando esté listo. Al pagar el 40% restante, se entrega tu pedido."
+    imagen="/img/paso6.png"
+    alt="Confirmación de pedido"
+  }}
+
+  {{> pasoscompra 
+    titulo="Paso 7"
+    descripcion='Si deseas envío, proporciona: dirección, nombre completo y número de teléfono. "Debe pagar el envío anticipadamente"'
+    imagen="/img/paso7.png"
+    alt="Datos de envío"
+  }}
+</section>
