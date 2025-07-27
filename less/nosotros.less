@@ -1,0 +1,137 @@
+@import 'variables.less';
+
+.about-us-page-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+    @media (max-width: 768px) {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
+
+.about-us-title {
+    text-align: center;
+    color: @text-color;
+    margin-bottom: 2rem;
+    font-size: 3.5rem;
+
+    @media (max-width: 768px) {
+        font-size: 2.8rem;
+    }
+}
+
+.about-us-intro {
+    margin-bottom: 3rem;
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: @text-color;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.about-us-gallery {
+    margin-bottom: 3rem;
+    text-align: center; // Para centrar el título de la galería
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // 2 columnas en pantallas medianas, 1 en pequeñas
+        gap: 1.5rem;
+        margin-top: 2rem;
+
+        @media (min-width: 769px) {
+            grid-template-columns: repeat(4, 1fr); // 4 columnas en pantallas grandes
+        }
+
+        .gallery-item {
+            background-color: #f0f0f0; // Fondo suave para cada imagen
+            border-radius: 8px;
+            overflow: hidden; // Asegura que la imagen no se salga del borde redondeado
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex; // Para centrar la imagen verticalmente si es necesario
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+                height: 180px; // Altura fija para todas las imágenes
+                object-fit: cover; // Corta la imagen si es necesario para llenar el espacio
+                display: block; // Elimina el espacio extra debajo de la imagen
+                border-radius: 8px; // Para mantener las esquinas redondeadas
+            }
+        }
+    }
+}
+
+.about-us-mission-vision {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .mission-section,
+    .vision-section {
+        flex: 1;
+        background-color: lighten(@color-4, 50%);
+        padding: 1.5rem;
+        border-left: 5px solid @color-4;
+        border-radius: 5px;
+    }
+}
+
+.section-heading-about-us {
+    color: @color-1;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+}
+
+.section-content-about-us {
+    color: @second-text-color;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+.about-us-values {
+    margin-top: 3rem;
+
+    .values-list {
+        list-style: none;
+        padding: 0;
+
+        li {
+            background-color: lighten(@color-1, 15%);
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+            h3 {
+                color: @color-3;
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid lighten(@color-3, 40%);
+                padding-bottom: 0.5rem;
+            }
+
+            p {
+                color: @second-text-color;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+        }
+    }
+}

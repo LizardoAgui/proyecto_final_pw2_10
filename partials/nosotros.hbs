@@ -1,0 +1,45 @@
+<main class="about-us-page-container">
+    <h1 class="about-us-title">{{title}}</h1>
+
+    <section class="about-us-intro">
+        <p>{{intro}}</p>
+        <p>{{paragraph2}}</p>
+        <p>{{paragraph3}}</p>
+        <p>{{paragraph4}}</p>
+        <p>{{paragraph5}}</p>
+    </section>
+
+    <section class="about-us-gallery">
+        <h2 class="section-heading-about-us">Nuestra Historia en Imágenes</h2>
+        <div class="gallery-grid">
+            {{#each galleryImages}}
+            <div class="gallery-item">
+                <img src="{{src}}" alt="{{alt}}">
+            </div>
+            {{/each}}
+        </div>
+    </section>
+    <section class="about-us-mission-vision">
+        <div class="mission-section">
+            <h2 class="section-heading-about-us"> {{mission.heading}}</h2>
+            <p class="section-content-about-us">{{mission.content}}</p>
+        </div>
+
+        <div class="vision-section">
+            <h2 class="section-heading-about-us"> {{vision.heading}}</h2>
+            <p class="section-content-about-us">{{vision.content}}</p>
+        </div>
+    </section>
+
+    <section class="about-us-values">
+        <h2 class="section-heading-about-us"> {{values.heading}}</h2>
+        <ul class="values-list">
+            {{#each values.list}}
+            <li>
+                <h3>{{title}}</h3>
+                <p>{{description}}</p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</main>
