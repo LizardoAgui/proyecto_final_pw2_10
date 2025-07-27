@@ -1,0 +1,40 @@
+@import "variables.less";
+@import "header.less";
+@import "footer.less";
+@import "hero.less";
+@import "responsive.less";
+@import "compra.less";
+@import "articulos.less";
+@import "catalogo.less";
+@import "ubicacion.less";
+@import "contacto.less";
+@import "faq.less";
+@import "terms.less";
+@import "nosotros.less";
+
+
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  background: @vertical-gradient;
+  color: @text-color;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}

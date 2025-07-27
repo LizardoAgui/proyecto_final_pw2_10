@@ -1,0 +1,40 @@
+@import "variables.less";
+.hero {
+  width: 100%;
+  height: 140vh;
+  background-image: url('/src/img/fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* Evitar overflow horizontal por padding */
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .hero-content {
+    z-index: 2;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    padding: 0 20px;
+
+    /* Para que el texto no desborde */
+    max-width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+}
